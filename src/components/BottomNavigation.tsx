@@ -16,7 +16,11 @@ export function BottomNavigation({ activeTab, onTabChange }: BottomNavigationPro
   ];
 
   return (
-    <div className="fixed bottom-0 left-0 right-0 z-50 bg-surface-1 border-t border-border/50 safe-area-bottom">
+    <div className="fixed bottom-0 left-0 right-0 z-50 shadow-md safe-area-bottom"
+         style={{
+           backgroundColor: 'var(--surface-1)',
+           borderTop: '1px solid var(--border-opaque)'
+         }}>
       <div className="flex items-center justify-around h-16 max-w-[480px] mx-auto px-4">
         {items.map((item) => {
           const Icon = item.icon;
