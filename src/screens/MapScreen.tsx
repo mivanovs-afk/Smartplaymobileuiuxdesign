@@ -38,7 +38,12 @@ export function MapScreen({ onQuestClick }: MapScreenProps) {
       {/* Map Container */}
       <div className="relative h-[calc(100vh-200px)]">
         {/* Simulated Map Background */}
-        <div className="absolute inset-0 bg-gradient-to-br from-blue-50 via-green-50 to-yellow-50">
+        <div className="absolute inset-0">
+          <iframe
+            src="https://www.openstreetmap.org/export/embed.html?bbox=23.686%2C56.622%2C23.76%2C56.666&layer=mapnik&marker=56.65%2C23.72"
+            className="w-full h-full"
+            style={{ border: 0, pointerEvents: 'none' }} 
+          />
           {/* Grid pattern to simulate map */}
           <div className="absolute inset-0" style={{
             backgroundImage: `

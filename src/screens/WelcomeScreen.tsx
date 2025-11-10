@@ -135,6 +135,15 @@ export function WelcomeScreen({ onComplete }: WelcomeScreenProps) {
               Explore manhole covers, big trees, and historical landmarks
             </p>
           </div>
+    
+          {/* OSM MAP (view-only iframe) */}
+          <div className="w-full h-64 overflow-hidden rounded-[12px] bg-surface-2">
+            <iframe
+              title="city-map"
+              src="https://www.openstreetmap.org/export/embed.html?bbox=23.686%2C56.622%2C23.76%2C56.666&layer=mapnik&marker=56.65%2C23.72"
+              className="w-full h-full border-0 pointer-events-none"
+            />
+          </div>
         </motion.div>
       )
     }

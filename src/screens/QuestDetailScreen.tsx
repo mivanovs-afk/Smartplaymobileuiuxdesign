@@ -179,14 +179,18 @@ export function QuestDetailScreen({ questId, onBack, onComplete }: QuestDetailSc
                   <span className="text-[12px] text-secondary">Tap to reveal</span>
                 </button>
               </SheetTrigger>
-              <SheetContent side="bottom" className="rounded-t-[24px]">
+              <SheetContent 
+                side="bottom" 
+                className="rounded-t-[24px] p-6 shadow-[0_-4px_20px_rgba(0,0,0,0.2)]"
+              >
                 <SheetHeader>
-                  <SheetTitle className="flex items-center gap-2">
+                  <SheetTitle className="flex items-center gap-2 text-[18px] font-semibold">
                     <Lightbulb className="w-5 h-5 text-warning" />
                     Hint
                   </SheetTitle>
                 </SheetHeader>
-                <div className="py-6">
+              
+                <div className="mt-4">
                   <p className="text-[15px] text-secondary leading-relaxed">
                     {quest.hint}
                   </p>
