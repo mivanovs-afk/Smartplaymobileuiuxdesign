@@ -1,0 +1,253 @@
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --font-size: 16px;
+  
+  /* Samsung One UI Color System */
+  --background: #F8F9FB;
+  --foreground: #1A1B1E;
+  
+  /* One UI Primary - Samsung Blue */
+  --primary: #1C74E9;
+  --primary-light: #4A90ED;
+  --primary-dark: #2B5CD7;
+  --primary-foreground: #FFFFFF;
+  
+  /* Quest Category Accent Colors */
+  --manhole-accent: #5A6E85;
+  --tree-accent: #4BAF6E;
+  --history-accent: #FFA534;
+  
+  /* One UI Neutral Palette */
+  --surface-1: #FFFFFF;
+  --surface-2: #F8F9FB;
+  --surface-3: #ECEEF2;
+  --surface-4: #D1D5DB;
+  
+  /* Text Colors */
+  --text-primary: #1A1B1E;
+  --text-secondary: #5F6368;
+  --text-tertiary: #9AA0A6;
+  --text-disabled: #C4C7CC;
+  
+  /* System Colors */
+  --success: #4BAF6E;
+  --warning: #FFA534;
+  --error: #E53935;
+  --info: #1C74E9;
+  
+  /* Legacy compatibility */
+  --card: #FFFFFF;
+  --card-foreground: #1A1B1E;
+  --popover: #FFFFFF;
+  --popover-foreground: #1A1B1E;
+  --secondary: #ECEEF2;
+  --secondary-foreground: #1A1B1E;
+  --muted: #ECEEF2;
+  --muted-foreground: #5F6368;
+  --accent: #E9EBEF;
+  --accent-foreground: #1A1B1E;
+  --destructive: #E53935;
+  --destructive-foreground: #FFFFFF;
+  --border: rgba(0, 0, 0, 0.08);
+  --input: transparent;
+  --input-background: #F3F3F5;
+  --switch-background: #D1D5DB;
+  --font-weight-medium: 500;
+  --font-weight-normal: 400;
+  --ring: #1C74E9;
+  
+  /* One UI Spacing Scale */
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --spacing-xl: 32px;
+  --spacing-2xl: 48px;
+  
+  /* One UI Border Radius */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --radius: 12px;
+  
+  /* One UI Elevation (Shadows) */
+  --elevation-1: 0 1px 3px rgba(0, 0, 0, 0.06);
+  --elevation-2: 0 2px 6px rgba(0, 0, 0, 0.08);
+  --elevation-3: 0 4px 12px rgba(0, 0, 0, 0.10);
+  --elevation-4: 0 8px 24px rgba(0, 0, 0, 0.12);
+  
+  /* Chart colors */
+  --chart-1: #1C74E9;
+  --chart-2: #4BAF6E;
+  --chart-3: #FFA534;
+  --chart-4: #5A6E85;
+  --chart-5: #E53935;
+  
+  /* Typography sizes (One UI inspired) */
+  --text-xs: 12px;
+  --text-sm: 14px;
+  --text-base: 16px;
+  --text-lg: 18px;
+  --text-xl: 20px;
+  --text-2xl: 24px;
+  --text-3xl: 28px;
+  --text-4xl: 32px;
+  --text-5xl: 40px;
+}
+
+.dark {
+  --background: #1A1B1E;
+  --foreground: #FFFFFF;
+  --surface-1: #2B2D31;
+  --surface-2: #35373B;
+  --surface-3: #3F4145;
+  --surface-4: #4A4C50;
+  --text-primary: #FFFFFF;
+  --text-secondary: #C4C7CC;
+  --text-tertiary: #9AA0A6;
+  --card: #2B2D31;
+  --card-foreground: #FFFFFF;
+  --popover: #2B2D31;
+  --popover-foreground: #FFFFFF;
+  --primary: #4A90ED;
+  --primary-foreground: #FFFFFF;
+  --secondary: #3F4145;
+  --secondary-foreground: #FFFFFF;
+  --muted: #3F4145;
+  --muted-foreground: #C4C7CC;
+  --accent: #3F4145;
+  --accent-foreground: #FFFFFF;
+  --border: rgba(255, 255, 255, 0.1);
+  --input-background: #3F4145;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-input-background: var(--input-background);
+  --color-switch-background: var(--switch-background);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+  }
+}
+
+/**
+ * Samsung One UI Typography System
+ */
+@layer base {
+  :where(:not(:has([class*=' text-']), :not(:has([class^='text-'])))) {
+    h1 {
+      font-size: 32px;
+      font-weight: 600;
+      line-height: 1.2;
+      letter-spacing: -0.5px;
+    }
+
+    h2 {
+      font-size: 24px;
+      font-weight: 600;
+      line-height: 1.3;
+      letter-spacing: -0.3px;
+    }
+
+    h3 {
+      font-size: 20px;
+      font-weight: 600;
+      line-height: 1.4;
+    }
+
+    h4 {
+      font-size: 18px;
+      font-weight: 600;
+      line-height: 1.4;
+    }
+
+    p {
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 1.5;
+    }
+
+    label {
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 1.5;
+    }
+
+    button {
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 1.5;
+    }
+
+    input {
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 1.5;
+    }
+  }
+}
+
+html {
+  font-size: var(--font-size);
+}
+
+/* One UI specific utilities */
+.oneui-card {
+  background: var(--surface-1);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--elevation-2);
+}
+
+.oneui-surface {
+  background: var(--surface-2);
+}
+
+.oneui-header-spacing {
+  padding-top: 48px;
+  padding-bottom: 24px;
+}
+
+.text-secondary {
+  color: var(--text-secondary);
+}
+
+.text-tertiary {
+  color: var(--text-tertiary);
+}
