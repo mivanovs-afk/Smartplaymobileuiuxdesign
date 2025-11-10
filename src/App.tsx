@@ -1,4 +1,5 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import Cookies from 'js-cookie';
 import { WelcomeScreen, UserProfile } from './screens/WelcomeScreen';
 import { HomeScreen } from './screens/HomeScreen';
 import { QuestCategoryScreen } from './screens/QuestCategoryScreen';
@@ -28,8 +29,19 @@ export default function App() {
   const [currentScreen, setCurrentScreen] = useState<Screen>({ type: 'welcome' });
   const [activeTab, setActiveTab] = useState<NavTab>('quests');
 
+  // Get info from cookie
+  useEffect(() => {
+    const savedProfile = Cookies.get('userProfile');
+    if (savedProfile) {
+      const profile: UserProfile = JSON.parse(savedProfile);
+      setUserProfile(profile);
+      setCurrentScreen({ type: 'home' });
+    }
+  }, []);
+
   const handleProfileComplete = (profile: UserProfile) => {
     setUserProfile(profile);
+    Cookies.set('userProfile', JSON.stringify(profile), { expires: 365 });
     setCurrentScreen({ type: 'home' });
     toast.success(`Welcome to SmartPlay, ${profile.name}! 🎉`);
   };
