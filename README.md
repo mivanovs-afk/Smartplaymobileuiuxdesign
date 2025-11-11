@@ -1,7 +1,7 @@
 
-  # SmartPlay Mobile UI/UX Design
+  # Orienteri
 
-  This is a code bundle for SmartPlay Mobile UI/UX Design. The original project is available at https://www.figma.com/design/1YA7LqqlF3PtCzkXnUHxXq/SmartPlay-Mobile-UI-UX-Design.
+  This is a code bundle for Orienteri Mobile UI/UX Design. The original project is available at https://www.figma.com/design/1YA7LqqlF3PtCzkXnUHxXq/SmartPlay-Mobile-UI-UX-Design.
 
   ## Running the code
 
